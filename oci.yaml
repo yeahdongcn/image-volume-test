@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod
+spec:
+  containers:
+    - name: test
+      image: ubuntu:22.04
+      command: ["sleep", "infinity"]
+      imagePullPolicy: IfNotPresent
+      volumeMounts:
+        - name: oci-volume
+          mountPath: /volume
+  volumes:
+    - name: oci-volume
+      image:
+        reference: ubuntu:20.04
+        pullPolicy: IfNotPresent
