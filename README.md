@@ -20,7 +20,7 @@ Deploy a pod with image volume:
 ➜ kubectl get pod pod
 NAME   READY   STATUS    RESTARTS   AGE
 pod    1/1     Running   0          10m
-➜ OCIVolume kubectl exec -it pod -- bash
+➜ kubectl exec -it pod -- bash
 root@pod:/# ls /
 bin  boot  dev  etc  home  lib  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  volume
 root@pod:/# ls /volume/
